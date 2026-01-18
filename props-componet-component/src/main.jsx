@@ -1,11 +1,21 @@
-
 import { createRoot } from 'react-dom/client'
+
 function Car(props) {
   return (
     <h2>I am a {props.brand}!</h2>
   );
 }
-let x = "Ford";
+
+function Garage() {
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <Car brand="Ford" />
+    </>
+  );
+}
+
 createRoot(document.getElementById('root')).render(
-  <Car brand={x} />
-)
+  <Garage />
+);
+
